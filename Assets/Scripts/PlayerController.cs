@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInputVector = context.ReadValue<Vector2>();
-        Debug.Log("OnMove called!" + moveInputVector);
+       // Debug.Log("OnMove called!" + moveInputVector);
     }
 
     private void FixedUpdate()
