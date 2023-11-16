@@ -17,7 +17,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 force = new Vector3(moveInputVector.x * speed, 0, moveInputVector.y * speed);
+        var movementInput = new Vector3(moveInputVector.x, 0, moveInputVector.y);
+        var camRotationFlattened = Quaternion.LookRotation(Camera.main.transform.forward);
+        var cameraRelativeInput = camRotationFlattened * movementInput;
+
+        Vector3 force = new Vector3(cameraRelativeInput.x * speed, 0, cameraRelativeInput.z * speed);
         rb.AddForce(force);        
     }
+
 }
