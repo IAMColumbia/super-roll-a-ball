@@ -6,7 +6,7 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public TMP_Text textObject;
-
+    public GameObject missionCompleteCanvas;
     public Color winColor;
 
 
@@ -20,6 +20,14 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("Player entered Trigger");
             textObject.color = winColor;
+
+            // Show the mission complete UI Canvas
+            missionCompleteCanvas.SetActive(true);
+
+            var playerController = other.GetComponent<PlayerController>();
+            playerController.enabled = false;
+            var rb = other.GetComponent<Rigidbody>();
+            rb.velocity = Vector3.zero;
         }
     }
 }
