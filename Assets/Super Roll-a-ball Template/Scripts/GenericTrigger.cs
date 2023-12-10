@@ -5,7 +5,10 @@ using UnityEngine.Events;
 
 public class GenericTrigger : MonoBehaviour
 {
+    public bool onlyTriggerOnce = false;
     public UnityEvent OnTriggerEntered;
+
+    private bool _hasTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +19,11 @@ public class GenericTrigger : MonoBehaviour
         if (isPlayer)
         {
             Debug.Log("Player entered Trigger");
-            OnTriggerEntered?.Invoke();
+            if (!_hasTriggered || !onlyTriggerOnce)
+            {
+                OnTriggerEntered?.Invoke();
+                _hasTriggered = true;
+            }
         }
     }
 }
