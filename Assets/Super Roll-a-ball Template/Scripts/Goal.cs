@@ -27,7 +27,16 @@ public class Goal : MonoBehaviour
             var playerController = other.GetComponent<PlayerController>();
             playerController.enabled = false;
             var rb = other.GetComponent<Rigidbody>();
+
+            // Stop the player from moving
             rb.velocity = Vector3.zero;
+
+            // I actually don't like stopping it right away
+            // or it doesn't roll into the goal.
+            // Need to think about best solution.
+            // Maybe just add invisible collision to goal.
+        
+            //rb.angularDrag = 100;
         }
     }
 }
