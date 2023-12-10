@@ -37,6 +37,10 @@ If you are cloning the project fresh, these will be installed automatically. Be 
 
 
 
+https://github.com/IAMColumbia/super-roll-a-ball/assets/3150710/d77b0083-e929-457e-ab92-85f6ddb931f7
+
+
+
 ### Adding to an existing project
 
 ## Example scene
