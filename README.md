@@ -20,3 +20,27 @@ Super Roll-a-ball is a starter project template for a game based on the Unity ro
 - Mission complete UI menu with functional replay level  / quit to main menu buttons (minimum).
 - Playable web build on itch.io
    - Itch page must have good production values (custom colors, title, credits for any external assets you did not create, appropriate game aspect ratio / resolution, no scrolling horizontally, etc.)
+ 
+## Unity project info / dependencies
+If you are cloning the project fresh, these will be installed automatically. Be sure to install these first if you import the .unitypackage into an existing project.
+- URP project created with Unity 2022.3.5
+- Uses the following packages
+   - New input system
+   - Cinemachine
+   - TextMeshPro
+   - ProBuilder
+   - ProGrids
+
+## Installation
+
+### Starting a new project
+
+### Adding to an existing project
+
+## Example scene
+
+Open `David Test Scene` to see an example of the core prefabs and functionality.
+
+## Using triggers
+
+## Setting up the Menus / Build settings
