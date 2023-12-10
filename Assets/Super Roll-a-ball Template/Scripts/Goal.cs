@@ -35,6 +35,7 @@ public class Goal : MonoBehaviour
             // or it doesn't roll into the goal.
             // Need to think about best solution.
             // Maybe just add invisible collision to goal.
+            // Maybe disable the respawn on falling below Y functionality.
         
             //rb.angularDrag = 100;
         }
